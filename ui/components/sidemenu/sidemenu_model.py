@@ -1,5 +1,5 @@
-from ui.components.toolbar.states.extanded_state import ExtendedState
-from ui.components.toolbar.states.icon_state import IconState
+from ui.components.sidemenu.states.extanded_state import ExtendedState
+from ui.components.sidemenu.states.icon_state import IconState
 
 
 class SidemenuModel:

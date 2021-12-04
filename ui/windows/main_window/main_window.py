@@ -13,6 +13,7 @@ from PyQt5.QtCore import QSize, Qt
 from PyQt5.QtWidgets import QMainWindow, QSizeGrip
 
 
+
 class Ui_MainWindow(QMainWindow):
 
     def __init__(self, controller):
@@ -35,12 +36,6 @@ class Ui_MainWindow(QMainWindow):
         # set flags to the window
         flags = QtCore.Qt.WindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setWindowFlags(flags)
-
-        # connenct the buttons
-        self.btn_close.clicked.connect(lambda: self.close())
-        self.btn_maximise_restore.clicked.connect(lambda: self.main_controller.change_window_format())
-        self.btn_minimize.clicked.connect(lambda: self.minimize())
-        self.btn_tgl_menu.clicked.connect(lambda: self.change_sidemenu())
 
         #create function that handles window_drag events
         def move_window(event):

@@ -1,6 +1,6 @@
-from ui.components.toolbar.Buttons.sidemenu_button_controller import SidemenuButtonController
-from ui.components.toolbar.sidemenu_model import SidemenuModel
-from ui.components.toolbar.sidemenu_view import SidemenuView
+from ui.components.sidemenu.Buttons.sidemenu_button_controller import SidemenuButtonController
+from ui.components.sidemenu.sidemenu_model import SidemenuModel
+from ui.components.sidemenu.sidemenu_view import SidemenuView
 
 
 class SidemenuController:

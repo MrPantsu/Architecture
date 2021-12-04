@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\tomre\PycharmProjects\Architecture\ui\Components\toolbar\sidemenu.ui'
+# Form implementation generated from reading ui file 'C:\Users\tomre\PycharmProjects\Architecture\ui\Components\sidemenu\sidemenu.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #

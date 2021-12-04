@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\tomre\PycharmProjects\Architecture\ui\Components\toolbar\sidemenu.ui'
+# Form implementation generated from reading ui file 'C:\Users\tomre\PycharmProjects\Architecture\ui\Components\sidemenu\sidemenu.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -10,8 +10,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-from toolbar.Buttons.sidemenuButton import Ui_Form
-from toolbar.Buttons.sidemenu_button_model import SidemenuButtonModel
+from ui.components.sidemenu.Buttons.sidemenuButton import Ui_Form
+from ui.components.sidemenu.Buttons.sidemenu_button_model import SidemenuButtonModel
 
 
 class SidemenuButtonView(object):

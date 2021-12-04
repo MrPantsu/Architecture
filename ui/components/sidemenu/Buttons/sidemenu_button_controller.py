@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
-from toolbar.Buttons.sidemenu_Button_view import SidemenuButtonView
-from toolbar.Buttons.sidemenu_button_model import SidemenuButtonModel
+from ui.components.sidemenu.Buttons.sidemenu_Button_view import SidemenuButtonView
+from ui.components.sidemenu.Buttons.sidemenu_button_model import SidemenuButtonModel
 
 
 class SidemenuButtonController:

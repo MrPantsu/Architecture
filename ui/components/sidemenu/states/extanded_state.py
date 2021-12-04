@@ -1,4 +1,4 @@
-from ui.components.toolbar.states.i_sidemenu_state import ISidemenuState
+from ui.components.sidemenu.states.i_sidemenu_state import ISidemenuState
 
 
 class ExtendedState(ISidemenuState):
