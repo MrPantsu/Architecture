@@ -49,11 +49,11 @@ class SidemenuView(object):
 
     def extend(self, button_names):
         self.change_width(200)
-        #ToDo enable fields with ButtonNames and show them next to the Button in an extra function
+        # ToDo enable fields with ButtonNames and show them next to the Button in an extra function
 
     def minimize(self):
         self.change_width(70)
-        #ToDo hide visibility of ButtonNames in an extra function
+        # ToDo hide visibility of ButtonNames in an extra function
 
     def change_width(self, end_width):
         width = self.frame_side_menu.width()
@@ -63,6 +63,10 @@ class SidemenuView(object):
         self.animation.setEndValue(end_width)
         self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
         self.animation.start()
+
+    def getSidemenuLayout(self) -> QtWidgets.QVBoxLayout:
+        return self.verticalLayout_4
+
 
 if __name__ == "__main__":
     import sys
