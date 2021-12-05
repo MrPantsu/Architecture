@@ -14,13 +14,16 @@ from ui.components.sidemenu.Buttons.sidemenuButton import Ui_Form
 from ui.components.sidemenu.Buttons.sidemenu_button_model import SidemenuButtonModel
 
 
-class SidemenuButtonView(object):
 
-    def setupUi(self, Form, ButtonModel:SidemenuButtonModel, position:int):
+class SidemenuButtonView(object):
+    def __init__(self, SidemenuButtonController):
+        self.sidemenuButtonController = SidemenuButtonController
+
+    def setupUi(self, Form, ButtonModel: SidemenuButtonModel):
         Form.setObjectName("Form")
         Form.resize(94, 70)
         self.sidemenuButton = QtWidgets.QPushButton(Form)
-        self.sidemenuButton.setGeometry(QtCore.QRect(0, 0+position*10, 70, 70)) #y increase by 70 for each initialisation
+        self.sidemenuButton.setGeometry(QtCore.QRect(0, 0, 70, 70))
         self.sidemenuButton.setMinimumSize(QtCore.QSize(70, 70))
         self.sidemenuButton.setMaximumSize(QtCore.QSize(16777215, 70))
         font = QtGui.QFont()
@@ -31,6 +34,10 @@ class SidemenuButtonView(object):
 
         self.retranslateUi(Form, ButtonModel)
         QtCore.QMetaObject.connectSlotsByName(Form)
+        self.sidemenuButton.clicked.connect(lambda: self.openMainWindowView(ButtonModel))
+
+    def openMainWindowView(self, ButtonModel):
+        self.sidemenuButtonController.updateMainWindowView(ButtonModel.linkedMainWindowView)
 
     def retranslateUi(self, Form, ButtonModel):
         _translate = QtCore.QCoreApplication.translate

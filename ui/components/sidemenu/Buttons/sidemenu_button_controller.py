@@ -7,16 +7,23 @@ class SidemenuButtonController:
     def __init__(self, sidemenu_controller):
         self.sidemenu_controller = sidemenu_controller
         self.button_models = SidemenuButtonModel.__subclasses__()
-        self.SidemenuButtonView = SidemenuButtonView()
-        self.getSidemenuButtonViews()
+        self.SidemenuButtonView = SidemenuButtonView(self)
 
-        # self.main_controller = main_controller
-        # self.sidemenu_model = SidemenuModel(self)
-        # self.sidemenu_view = SidemenuView(self.main_controller.get_centerlayout())
+    # def getSidemenuButtonViews(self):
+    #     sidemenuLayout = self.sidemenu_controller.getSidemenuLayout()
+    #     for position, ButtonModel in enumerate(SidemenuButtonModel.__subclasses__()):
+    #         widget_button = QtWidgets.QWidget()
+    #         sidemenuLayout.addWidget(widget_button)
+    #         self.SidemenuButtonView.setupUi(widget_button, ButtonModel(), position)
 
-    def getSidemenuButtonViews(self):
+    def updateMainWindowView(self, View):
+        self.sidemenu_controller.updateMainWindowView(View)
+        pass
+
+    def build_button_for_page(self, name, linked_page, icon_link):
+        ButtonModel = SidemenuButtonModel(name, linked_page, icon_link)
+        widget_button = QtWidgets.QWidget()
         sidemenuLayout = self.sidemenu_controller.getSidemenuLayout()
-        for position, ButtonModel in enumerate(SidemenuButtonModel.__subclasses__()):
-            widget_button = QtWidgets.QWidget()
-            sidemenuLayout.addWidget(widget_button)
-            self.SidemenuButtonView.setupUi(widget_button, ButtonModel(), position)
+        sidemenuLayout.addWidget(widget_button)
+        self.SidemenuButtonView.setupUi(widget_button, ButtonModel)
+

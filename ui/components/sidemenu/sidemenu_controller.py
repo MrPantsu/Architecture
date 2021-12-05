@@ -3,6 +3,7 @@ from ui.components.sidemenu.sidemenu_model import SidemenuModel
 from ui.components.sidemenu.sidemenu_view import SidemenuView
 
 
+
 class SidemenuController:
     def __init__(self, main_controller):
         self.main_controller = main_controller
@@ -18,3 +19,9 @@ class SidemenuController:
 
     def getSidemenuLayout(self):
         return self.sidemenu_view.getSidemenuLayout()
+
+    def updateMainWindowView(self, View):
+        self.main_controller.display_view(View)
+
+    def build_button_for_page(self, name, linked_page, icon_link):
+        self.button_controller.build_button_for_page(name, linked_page, icon_link)

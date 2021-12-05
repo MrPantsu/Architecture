@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication
 from ui.components.sidemenu.sidemenu_controller import SidemenuController
 from ui.windows.main_window.main_window import Ui_MainWindow
 from ui.windows.main_window.main_window_model import MainWindowModel
+from ui.windows.main_window.pages import Pages
 
 class MainWindowController:
     def __init__(self, app):
@@ -13,6 +14,7 @@ class MainWindowController:
         self.main_window_model = MainWindowModel(self)
         self.main_window_ui = Ui_MainWindow(self)
         self.sidemenu_controller = SidemenuController(self)
+        self.build_pages()
 
         # connenct the buttons
         self.main_window_ui.btn_close.clicked.connect(lambda: self.close_app())
@@ -49,3 +51,12 @@ class MainWindowController:
 
     def change_sidemenu(self):
         self.sidemenu_controller.sidemenu_model.sidemenu_state.move_to_next_visibility_state()  #ToDo Frage: kann ich direkt auf die zugreifen oder soll ich in jeder klasse eine eigene Funktion einbinden die weiterleitet??
+
+    def build_pages(self):
+        for Page in Pages.__subclasses__():
+            Page = Page()
+            self.sidemenu_controller.build_button_for_page(Page.name, Page.linked_page, Page.icon_link)
+
+    def display_view(self, View):
+        # display view (StackedWidget) in frame_main_content
+        pass

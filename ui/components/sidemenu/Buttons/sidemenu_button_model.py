@@ -6,9 +6,13 @@ from ui.components.sidemenu.states.icon_state import IconState
 
 class SidemenuButtonModel:
     buttonName = ""
-    pathLinkedMainWindowView = ""
+    linkedMainWindowView = ""
+    iconPath = ""
 
-    def __init__(self):
+    def __init__(self, buttonName, linkedMainWindowview, iconPath):
+        self.buttonName = buttonName
+        self.linkedMainWindowView = linkedMainWindowview
+        self.iconPath = iconPath
         self.extended_state = ExtendedState(self)
         self.icon_state = IconState(self)
         self.sidemenu_state = self.icon_state
@@ -17,34 +21,3 @@ class SidemenuButtonModel:
 
     def set_state(self, state):
         self.sidemenu_state = state
-
-
-class SidemenuButton1(SidemenuButtonModel):
-    def __init__(self):
-        super().__init__()
-        self.buttonName = "test1"
-        self.pathLinkedMainWindowView = ""
-
-class SidemenuButton2(SidemenuButtonModel):
-    def __init__(self):
-        super().__init__()
-        self.buttonName = "test2"
-        self.pathLinkedMainWindowView = ""
-
-class SidemenuButton3(SidemenuButtonModel):
-    def __init__(self):
-        super().__init__()
-        self.buttonName = "test3"
-        self.pathLinkedMainWindowView = ""
-
-class SidemenuButton4(SidemenuButtonModel):
-    def __init__(self):
-        super().__init__()
-        self.buttonName = "test4"
-        self.pathLinkedMainWindowView = ""
-
-class SidemenuButton5(SidemenuButtonModel):
-    def __init__(self):
-        super().__init__()
-        self.buttonName = "test5"
-        self.pathLinkedMainWindowView = ""
