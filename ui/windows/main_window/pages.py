@@ -1,19 +1,24 @@
+from ui.windows.main_window.UI_Designer_pages.MainMenu import MainMenuView
+from ui.windows.main_window.UI_Designer_pages.Tarifsimulation import Tarifsimulation_View
+
 class Pages:
     name = ""
-    linked_page = ""
+    view = object
     icon_link = ""
 
-    def __init__(self, name, linked_page, icon_link):
+    def __init__(self, name, view, icon_link):
         self.name = name
-        self.linked_page = linked_page
+        self.view = view
         self.icon_link = icon_link
 
 
-class Tarifsimulation(Pages):
+class MainMenu(Pages):
     def __init__(self):
-        super().__init__("Tarifsimulator", "StackedWidget", "Iconpath")
+
+        super().__init__("Main Menu", MainMenuView, "Iconpath")
+
 
 
 class Tarifvergleich(Pages):
     def __init__(self):
-        super().__init__("Tarifvergleich", "StackedWidget", "Iconpath")
+        super().__init__("Tarifsimulation", Tarifsimulation_View, "Iconpath")
