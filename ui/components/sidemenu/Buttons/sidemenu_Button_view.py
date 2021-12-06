@@ -34,10 +34,10 @@ class SidemenuButtonView(object):
 
         self.retranslateUi(Form, ButtonModel)
         QtCore.QMetaObject.connectSlotsByName(Form)
-        self.sidemenuButton.clicked.connect(lambda: self.openMainWindowView(ButtonModel))
+        self.sidemenuButton.clicked.connect(lambda: self.updateMainWindowView(ButtonModel.buttonName))
 
-    def openMainWindowView(self, ButtonModel):
-        self.sidemenuButtonController.updateMainWindowView(ButtonModel.linkedMainWindowView)
+    def updateMainWindowView(self, pageName):
+        self.sidemenuButtonController.updateMainWindowView(pageName)
 
     def retranslateUi(self, Form, ButtonModel):
         _translate = QtCore.QCoreApplication.translate

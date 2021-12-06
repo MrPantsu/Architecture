@@ -1,12 +1,12 @@
 import sys
 
-from PyQt5 import QtCore
-from PyQt5.QtWidgets import QMainWindow, QApplication
-
 from ui.components.sidemenu.sidemenu_controller import SidemenuController
 from ui.windows.main_window.main_window import Ui_MainWindow
 from ui.windows.main_window.main_window_model import MainWindowModel
-from ui.windows.main_window.pages import Pages
+from ui.windows.main_window.pages import Pages, MainMenu
+from ui.windows.main_window.UI_Designer_pages.MainMenu import MainMenuView
+
+from PyQt5 import QtWidgets
 
 class MainWindowController:
     def __init__(self, app):
@@ -23,6 +23,9 @@ class MainWindowController:
         self.main_window_ui.btn_tgl_menu.clicked.connect(lambda: self.change_sidemenu())
     def get_centerlayout(self):
         return self.main_window_ui.get_centerlayout()
+
+    def get_Mainview_Widget(self):
+        return self.main_window_ui.get_Mainview_Widget()
 
     def build_toolbutton(self):
         pass
@@ -57,8 +60,25 @@ class MainWindowController:
     def build_pages(self):
         for Page in Pages.__subclasses__():
             Page = Page()
-            self.sidemenu_controller.build_button_for_page(Page.name, Page.linked_page, Page.icon_link)
+            self.sidemenu_controller.build_button_for_page(Page.name, Page.view, Page.icon_link)
+            # initialise Qwidget to put in Frame
+            page_Widget = QtWidgets.QWidget()
+            page_Widget.setObjectName(Page.name)
+            mainMenuLayout = self.get_Mainview_Widget()
+            mainMenuLayout.addWidget(page_Widget)
+            view = Page.view()
+            view.setupUi(page_Widget, Page.name)
+        self.setMainView(MainMenu().name)
 
-    def display_view(self, View):
-        # display view (StackedWidget) in frame_main_content
-        pass
+    def setMainView(self, name):
+        mainMenuLayout = self.get_Mainview_Widget()
+        #for count, Page in enumerate(Pages.__subclasses__()):
+        try:
+            for i in range(0,100):
+                widget = mainMenuLayout.widget(i)
+                print(widget.objectName())
+                if mainMenuLayout.widget(i).objectName() == name:
+                    mainMenuLayout.setCurrentWidget(widget)
+                    break
+        except:
+            print("no Page found in StackedWidget")

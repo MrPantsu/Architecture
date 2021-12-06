@@ -339,6 +339,9 @@ class Ui_MainWindow(QMainWindow):
     def get_centerlayout(self):
         return self.layout_side
 
+    def get_Mainview_Widget(self):
+        return self.stackedWidget
+
     def maximize(self):
         self.showMaximized()
         self.btn_maximise_restore.setToolTip("Restore")
