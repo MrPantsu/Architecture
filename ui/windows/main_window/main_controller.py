@@ -68,24 +68,17 @@ class MainWindowController:
             mainMenuLayout.addWidget(page_Widget)
             view = Page.view()
             view.setupUi(page_Widget, Page.name)
-        self.setMainView(MainMenu())
+        self.setMainView(MainMenu().name)
 
-    def setMainView(self, page:Pages):
+    def setMainView(self, name):
         mainMenuLayout = self.get_Mainview_Widget()
         #for count, Page in enumerate(Pages.__subclasses__()):
         try:
-            for i in range(0,10):
+            for i in range(0,100):
                 widget = mainMenuLayout.widget(i)
                 print(widget.objectName())
-                if mainMenuLayout.widget(i).objectName() == page.name:
+                if mainMenuLayout.widget(i).objectName() == name:
                     mainMenuLayout.setCurrentWidget(widget)
                     break
         except:
             print("no Page found in StackedWidget")
-
-
-
-
-    def display_view(self, View):
-        # display view (StackedWidget) in frame_main_content
-        pass

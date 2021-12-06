@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets
 from ui.components.sidemenu.Buttons.sidemenu_Button_view import SidemenuButtonView
 from ui.components.sidemenu.Buttons.sidemenu_button_model import SidemenuButtonModel
+from ui.windows.main_window.pages import Pages
 
 
 class SidemenuButtonController:
@@ -16,8 +17,8 @@ class SidemenuButtonController:
     #         sidemenuLayout.addWidget(widget_button)
     #         self.SidemenuButtonView.setupUi(widget_button, ButtonModel(), position)
 
-    def updateMainWindowView(self, View):
-        self.sidemenu_controller.updateMainWindowView(View)
+    def updateMainWindowView(self, name):
+        self.sidemenu_controller.updateMainWindowView(name)
         pass
 
     def build_button_for_page(self, name, linked_page, icon_link):
@@ -26,4 +27,7 @@ class SidemenuButtonController:
         sidemenuLayout = self.sidemenu_controller.getSidemenuLayout()
         sidemenuLayout.addWidget(widget_button)
         self.SidemenuButtonView.setupUi(widget_button, ButtonModel)
+
+
+
 

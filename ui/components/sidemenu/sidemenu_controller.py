@@ -1,7 +1,7 @@
 from ui.components.sidemenu.Buttons.sidemenu_button_controller import SidemenuButtonController
 from ui.components.sidemenu.sidemenu_model import SidemenuModel
 from ui.components.sidemenu.sidemenu_view import SidemenuView
-
+from ui.windows.main_window.pages import Pages
 
 
 class SidemenuController:
@@ -20,8 +20,8 @@ class SidemenuController:
     def getSidemenuLayout(self):
         return self.sidemenu_view.getSidemenuLayout()
 
-    def updateMainWindowView(self, View):
-        self.main_controller.display_view(View)
+    def updateMainWindowView(self, name):
+        self.main_controller.setMainView(name)
 
     def build_button_for_page(self, name, linked_page, icon_link):
         self.button_controller.build_button_for_page(name, linked_page, icon_link)
