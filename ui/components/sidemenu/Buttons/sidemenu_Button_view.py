@@ -19,7 +19,7 @@ class SidemenuButtonView(object):
     def __init__(self, SidemenuButtonController):
         self.sidemenuButtonController = SidemenuButtonController
 
-    def setupUi(self, Form, ButtonModel: SidemenuButtonModel):
+    def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(94, 70)
         self.sidemenuButton = QtWidgets.QPushButton(Form)
@@ -32,17 +32,17 @@ class SidemenuButtonView(object):
         self.sidemenuButton.setFont(font)
         self.sidemenuButton.setObjectName("sidemenuButton")
 
-        self.retranslateUi(Form, ButtonModel)
+        self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
-        self.sidemenuButton.clicked.connect(lambda: self.updateMainWindowView(ButtonModel.buttonName))
+        self.sidemenuButton.clicked.connect(lambda: self.updateMainWindowView(self.sidemenuButtonController.button_model.buttonName))
 
     def updateMainWindowView(self, pageName):
         self.sidemenuButtonController.updateMainWindowView(pageName)
 
-    def retranslateUi(self, Form, ButtonModel):
+    def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.sidemenuButton.setText(_translate("Form", ButtonModel.buttonName))
+        self.sidemenuButton.setText(_translate("Form", self.sidemenuButtonController.button_model.buttonName))
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ class SidemenuController:
         self.main_controller = main_controller
         self.sidemenu_model = SidemenuModel(self)
         self.sidemenu_view = SidemenuView(self.main_controller.get_centerlayout())
-        self.button_controller = SidemenuButtonController(self) # list an button controller erstellen
+        self.button_controller_list = list() # list an button controller erstellen
 
     def extend_sidemenu(self):
         self.sidemenu_view.extend("here goes the names")
@@ -25,4 +25,6 @@ class SidemenuController:
 
     def build_button_for_page(self, name, linked_page, icon_link):
         #für jeden Button einen Controller nicht in Init
-        self.button_controller.build_button_for_page(name, linked_page, icon_link)
+        buttonController = SidemenuButtonController(self, name, linked_page, icon_link)
+        self.button_controller_list.append(SidemenuButtonController)
+        buttonController.build_button_for_page()
