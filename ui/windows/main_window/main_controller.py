@@ -1,7 +1,7 @@
 import sys
 
 from ui.components.sidemenu.sidemenu_controller import SidemenuController
-from ui.windows.main_window.main_window import Ui_MainWindow
+from ui.windows.main_window.Main_Menu_from_FH import Ui_MainWindow
 from ui.windows.main_window.main_window_model import MainWindowModel
 from ui.windows.main_window.pages import Pages, MainMenu
 from ui.windows.main_window.UI_Designer_pages.MainMenu import MainMenuView
