@@ -1,24 +1,28 @@
-from ui.windows.main_window.UI_Designer_pages.MainMenu import MainMenuView
-from ui.windows.main_window.UI_Designer_pages.Tarifsimulation import Tarifsimulation_View
+from ui.components.mainContent.mainContent_Controller.mainContent_mainMenu_controller import MainMenuController
+from ui.components.mainContent.mainContent_Views.MainMenu import MainMenuView
+from ui.components.mainContent.mainContent_Views.Tarifsimulation import Tarifsimulation_View
 
 class Pages:
     name = ""
-    view = object
+    view = object # Todo: braucht man nicht, weil in Controller
     icon_link = ""
+    controller = object
 
-    def __init__(self, name, view, icon_link):
+    def __init__(self, name, view, icon_link, controller):
         self.name = name
-        self.view = view
+        self.view = view # Todo: braucht man nicht, weil in Controller
         self.icon_link = icon_link
+        self.controller = controller
+
 
 
 class MainMenu(Pages):
     def __init__(self):
 
-        super().__init__("Main Menu", MainMenuView, "Iconpath")
+        super().__init__("Main Menu", MainMenuView, "Iconpath", MainMenuController)
 
 
 
 class Tarifvergleich(Pages):
     def __init__(self):
-        super().__init__("Tarifsimulation", Tarifsimulation_View, "Iconpath")
+        super().__init__("Tarifsimulation", Tarifsimulation_View, "Iconpath", MainMenuController)
