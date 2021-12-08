@@ -16,7 +16,7 @@ class MainMenuView(object):
         Form.setObjectName(widgetName)
         Form.resize(1255, 628)
         self.frame_4 = QtWidgets.QFrame(Form)
-        self.frame_4.setGeometry(QtCore.QRect(0, 0, 1236, 582))
+        self.frame_4.setGeometry(QtCore.QRect(70, 70, 1236, 582))
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")

@@ -24,7 +24,7 @@ class SidemenuController:
         self.main_controller.setMainView(name)
 
     def build_button_for_page(self, name, linked_page, icon_link):
-        #für jeden Button einen Controller nicht in Init
+        # für jeden Button einen Controller nicht in Init
         buttonController = SidemenuButtonController(self, name, linked_page, icon_link)
         self.button_controller_list.append(SidemenuButtonController)
         buttonController.build_button_for_page()

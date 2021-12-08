@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1240</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame_4">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_30">
+      <item row="1" column="0">
+       <widget class="QFrame" name="frame_7">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_35">
+         <item row="2" column="3">
+          <widget class="QPushButton" name="pushButton__home_iv">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border: none;
+	background-color: rgb(1,115,164);   
+    text-align: center;
+	color: rgb(255,255,255);
+	padding: 8px;
+	padding-left: 15 px;
+	padding-right: 15 px;
+	border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: rgb(1,133,177);
+}
+QPushButton:pressed {
+	background-color: rgb(1,115,164);
+}</string>
+           </property>
+           <property name="text">
+            <string>Indexvergleich</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-loop.png</normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-loop.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QPushButton" name="pushButton__home_tv">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border: none;
+	background-color: rgb(1,115,164);   
+    text-align: center;
+	color: rgb(255,255,255);
+	padding: 8px;
+	padding-left: 15 px;
+	padding-right: 15 px;
+	border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: rgb(1,133,177);
+}
+QPushButton:pressed {
+	background-color: rgb(1,115,164);
+}</string>
+           </property>
+           <property name="text">
+            <string>Tarifvergleich</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-library.png</normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-library.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="4">
+          <widget class="QPushButton" name="pushButton_home_pfz">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border: none;
+	background-color: rgb(1,115,164);   
+    text-align: center;
+	color: rgb(255,255,255);
+	padding: 8px;
+	padding-left: 15 px;
+	padding-right: 15 px;
+	border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: rgb(1,133,177);
+}
+QPushButton:pressed {
+	background-color: rgb(1,115,164);
+}</string>
+           </property>
+           <property name="text">
+            <string>Portfoliozusammenfassung</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-folder-open.png</normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-folder-open.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="pushButton__home_is">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border: none;
+	background-color: rgb(1,115,164);   
+    text-align: center;
+	color: rgb(255,255,255);
+	padding: 8px;
+	padding-left: 15 px;
+	padding-right: 15 px;
+	border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: rgb(1,133,177);
+}
+QPushButton:pressed {
+	background-color: rgb(1,115,164);
+}</string>
+           </property>
+           <property name="text">
+            <string>Indexsimulation</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-3d.png</normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-3d.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="pushButton__home_ts">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border: none;
+	background-color: rgb(1,115,164);   
+    text-align: center;
+	color: rgb(255,255,255);
+	padding: 8px;
+	padding-left: 15 px;
+	padding-right: 15 px;
+	border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: rgb(1,133,177);
+}
+QPushButton:pressed {
+	background-color: rgb(1,115,164);
+}</string>
+           </property>
+           <property name="text">
+            <string>Tarifsimulation</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-chart-line.png</normaloff>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/icons/16x16/cil-chart-line.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QFrame" name="frame_6">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_34">
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_14">
+           <property name="maximumSize">
+            <size>
+             <width>400</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+	color: rgb(235, 102, 38);
+}</string>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;TARIFSIMULATOR&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="indent">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <spacer name="horizontalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_15">
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/Visuals/WE_icon_bearbeitet.png</pixmap>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <spacer name="horizontalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QFrame" name="frame_5">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>170</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>170</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_27">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>C:/Users/Andreas/PycharmProjects/TarifSimulator_WE/GUI/Visuals/Banner_Tariflinge.png</pixmap>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
