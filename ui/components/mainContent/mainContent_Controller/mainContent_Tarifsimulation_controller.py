@@ -7,8 +7,8 @@ from PyQt5 import QtWidgets
 class TarifsimulationController:
     def __init__(self, main_controller, name):
         self.main_controller = main_controller
-        self.mainMenu_model = Tarifsimulation_Model(self)
-        self.MainMenu_view = Tarifsimulation_View()
+        self.tarifsimulation_model = Tarifsimulation_Model(self)
+        self.tarifsimulation_view = Tarifsimulation_View()
         self.name = name
         self.build_view()
 
@@ -20,4 +20,27 @@ class TarifsimulationController:
         page_Widget.setObjectName(self.name)
         mainview_widget = self.get_Mainview_Widget()
         mainview_widget.addWidget(page_Widget)
-        self.MainMenu_view.setupUi(page_Widget, self.name)
+        self.tarifsimulation_view.setupUi(page_Widget, self.name)
+
+    def set_default_in_view(self):
+        pass
+
+    def get_user_inputs(self):
+        #Exceptions hier einbauen
+        pass
+
+    def compute_tarifsimulation(self):
+        # returns Dataframe
+        pass
+
+    def draw_consumption_graph(self):
+        pass
+
+    def draw_date_graph(self):
+        pass
+
+
+    def draw_graphs(self):
+        self.draw_date_graph()
+        self.draw_consumption_graph()
+

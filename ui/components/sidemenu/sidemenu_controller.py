@@ -1,7 +1,6 @@
 from ui.components.sidemenu.Buttons.sidemenu_button_controller import SidemenuButtonController
 from ui.components.sidemenu.sidemenu_model import SidemenuModel
 from ui.components.sidemenu.sidemenu_view import SidemenuView
-from ui.windows.main_window.pages import Pages
 
 
 class SidemenuController:
@@ -9,7 +8,7 @@ class SidemenuController:
         self.main_controller = main_controller
         self.sidemenu_model = SidemenuModel(self)
         self.sidemenu_view = SidemenuView(self.main_controller.get_centerlayout())
-        self.button_controller_list = list() # list an button controller erstellen
+        self.button_controller_list = list()
 
     def extend_sidemenu(self):
         self.sidemenu_view.extend("here goes the names")
@@ -23,8 +22,7 @@ class SidemenuController:
     def updateMainWindowView(self, name):
         self.main_controller.setMainView(name)
 
-    def build_button_for_page(self, name, linked_page, icon_link):
-        # für jeden Button einen Controller nicht in Init
-        buttonController = SidemenuButtonController(self, name, linked_page, icon_link)
+    def build_button_for_page(self, name, icon_link):
+        buttonController = SidemenuButtonController(self, name, icon_link)
         self.button_controller_list.append(SidemenuButtonController)
         buttonController.build_button_for_page()

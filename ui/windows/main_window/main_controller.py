@@ -4,9 +4,7 @@ from ui.components.sidemenu.sidemenu_controller import SidemenuController
 from ui.windows.main_window.main_window_v2 import Ui_MainWindow
 # from ui.windows.main_window.main_window import Ui_MainWindow
 from ui.windows.main_window.main_window_model import MainWindowModel
-from ui.windows.main_window.pages import Pages, MainMenu
-
-from PyQt5 import QtWidgets
+from ui.components.Pages.pages import Pages, MainMenu
 
 
 class MainWindowController:
@@ -66,15 +64,8 @@ class MainWindowController:
             Page = Page()
             controller = Page.controller(self, Page.name)
             self.mainContentController_List.append(controller)
-            self.sidemenu_controller.build_button_for_page(Page.name, Page.view, Page.icon_link)
-            # initialise Qwidget to put in Frame
-            # this should be in an MainContent_Controller
-            # page_Widget = QtWidgets.QWidget()
-            # page_Widget.setObjectName(Page.name)
-            # mainMenuLayout = self.get_Mainview_Widget()
-            # mainMenuLayout.addWidget(page_Widget)
-            # view = Page.view()
-            # view.setupUi(page_Widget, Page.name)
+            self.sidemenu_controller.build_button_for_page(Page.name, Page.icon_link)
+
         self.setMainView(MainMenu().name)
 
     def setMainView(self, name):

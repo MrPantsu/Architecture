@@ -1,13 +1,12 @@
 from PyQt5 import QtWidgets
 from ui.components.sidemenu.Buttons.sidemenu_Button_view import SidemenuButtonView
 from ui.components.sidemenu.Buttons.sidemenu_button_model import SidemenuButtonModel
-from ui.windows.main_window.pages import Pages
 
 
 class SidemenuButtonController:
-    def __init__(self, sidemenu_controller, name, view, icon_link):
+    def __init__(self, sidemenu_controller, name, icon_link):
         self.sidemenu_controller = sidemenu_controller
-        self.button_model = SidemenuButtonModel(name, view, icon_link)
+        self.button_model = SidemenuButtonModel(name, icon_link)
         self.SidemenuButtonView = SidemenuButtonView(self)
 
     def updateMainWindowView(self, name):

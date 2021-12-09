@@ -6,13 +6,11 @@ from ui.components.mainContent.mainContent_Views.Tarifsimulation_v2 import Tarif
 
 class Pages:
     name = ""
-    view = object # Todo: braucht man nicht, weil in Controller
     icon_link = ""
     controller = object
 
-    def __init__(self, name, view, icon_link, controller):
+    def __init__(self, name, icon_link, controller):
         self.name = name
-        self.view = view # Todo: braucht man nicht, weil in Controller
         self.icon_link = icon_link
         self.controller = controller
 
@@ -20,11 +18,10 @@ class Pages:
 
 class MainMenu(Pages):
     def __init__(self):
-
-        super().__init__("Main Menu", MainMenuView, "Iconpath", MainMenuController)
+        super().__init__("Main Menu", "Iconpath", MainMenuController)
 
 
 
 class Tarifvergleich(Pages):
     def __init__(self):
-        super().__init__("Tarifsimulation", Tarifsimulation_View, "Iconpath", TarifsimulationController)
+        super().__init__("Tarifsimulation", "Iconpath", TarifsimulationController)
