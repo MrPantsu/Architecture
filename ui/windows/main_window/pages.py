@@ -1,6 +1,8 @@
 from ui.components.mainContent.mainContent_Controller.mainContent_mainMenu_controller import MainMenuController
-from ui.components.mainContent.mainContent_Views.MainMenu import MainMenuView
-from ui.components.mainContent.mainContent_Views.Tarifsimulation import Tarifsimulation_View
+from ui.components.mainContent.mainContent_Controller.mainContent_Tarifsimulation_controller import TarifsimulationController
+from ui.components.mainContent.mainContent_Views.Main_Menu_v2 import MainMenuView
+from ui.components.mainContent.mainContent_Views.Tarifsimulation_v2 import Tarifsimulation_View
+
 
 class Pages:
     name = ""
@@ -25,4 +27,4 @@ class MainMenu(Pages):
 
 class Tarifvergleich(Pages):
     def __init__(self):
-        super().__init__("Tarifsimulation", Tarifsimulation_View, "Iconpath", MainMenuController)
+        super().__init__("Tarifsimulation", Tarifsimulation_View, "Iconpath", TarifsimulationController)

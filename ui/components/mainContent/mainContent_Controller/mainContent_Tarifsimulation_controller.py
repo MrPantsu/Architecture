@@ -1,14 +1,14 @@
 
-from ui.components.mainContent.mainContent_Views.Main_Menu_v2 import MainMenuView
-from ui.components.mainContent.mainContent_Models.mainContent_MainMenu_model import MainMenu_Model
+from ui.components.mainContent.mainContent_Views.Tarifsimulation_v2 import Tarifsimulation_View
+from ui.components.mainContent.mainContent_Models.mainContent_Tarifsimulation_model import Tarifsimulation_Model
 from PyQt5 import QtWidgets
 
 
-class MainMenuController:
+class TarifsimulationController:
     def __init__(self, main_controller, name):
         self.main_controller = main_controller
-        self.mainMenu_model = MainMenu_Model(self)
-        self.MainMenu_view = MainMenuView()
+        self.mainMenu_model = Tarifsimulation_Model(self)
+        self.MainMenu_view = Tarifsimulation_View()
         self.name = name
         self.build_view()
 
